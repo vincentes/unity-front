@@ -5,15 +5,15 @@ import router from './router';
 import store from './store';
 import './assets/css/app.css';
 
-import Spinner from './components/shared/Spinner.vue';
-
 /** VUE GLOBAL COMPONENTS */
-Vue.component('Spinner', Spinner);
-
 Vue.config.productionTip = false;
 
 new Vue({
+  el: '#app',
   router,
   store,
+  mounted: function () {
+    document.body.classList.add('bg-gray-900');
+  },
   render: h => h(App),
 }).$mount('#app');
