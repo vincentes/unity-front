@@ -1,6 +1,5 @@
 <template>
   <div class="overflow-clip">
-    <div></div>
     <div>
       <div class="flex flex-row w-full">
         <div class="flex flex-col w-full md:w-6/12">
@@ -8,15 +7,17 @@
           <h1 class="text-4xl md:font-semibold">Welcome back</h1>
         </div>
         <div class="hidden md:flex md:flex-row md:w-6/12 items-center justify-center">
-          <SearchIcon></SearchIcon>
-          <input class="ml-6 bg-gray-900" placeholder="Search" type="textfield" />
-          <BellIcon class="rounded-full shadow-2xl"></BellIcon>
+          <SearchIcon />
+          <input class="ml-6 bg-primary" placeholder="Search" type="textfield" />
+          <div class="p-3 rounded-full bg-red-500 shadow-3xl">
+            <BellIcon class="shadow-3xl" />
+          </div>
         </div>
       </div>
-      <PlanetPicVert class="md:hidden"></PlanetPicVert>
-      <PlanetPicHor class="hidden md:block"></PlanetPicHor>
+      <PlanetPicVert class="md:hidden" />
+      <PlanetPicHor class="hidden md:block" />
 
-      <div class="mt-12 relative w-full px-8 py-8 bg-gray-800 rounded-2xl">
+      <div class="mt-12 relative w-full px-8 py-8 bg-primary-light rounded-2xl">
         <div class="flex flex-row space-x-6 items-center">
           <div class="w-full flex flex-row space-x-6 items-center md:w-11/12">
             <FilterSelect class="md:w-6/12 w-full"></FilterSelect>
@@ -25,9 +26,9 @@
           <PencilIcon class="hidden flex-grow-0 md:block md:w-1/12"></PencilIcon>
         </div>
 
-        <div class="flex flex-row items-center space-x-6">
+        <div class="flex flex-row items-center space-x-6 shadow-2xl drop-shadow-2xl">
           <div class="w-full flex flex-row space-x-6 items-center md:w-11/12">
-            <div class="w-full mt-5 grid grid-cols-12 bg-gray-700 rounded-2xl flex-row space-x-0">
+            <div class="w-full mt-5 grid grid-cols-12 bg-primary-intermediate rounded-2xl flex-row space-x-0">
               <div class="flex col-span-2 items-center justify-center w-full">
                 <SearchIcon></SearchIcon>
               </div>
@@ -39,8 +40,8 @@
                   w-full
                   select-none
                   rounded-2xl
-                  bg-gray-700
-                  focus:ring-opacity-500 focus:ring-gray-700 focus:outline-none
+                  bg-primary-intermediate
+                  focus:ring-opacity-500 focus:ring-primary-intermediate focus:outline-none
                   btn btn-blue
                   appearance-none
                   px-5
@@ -125,43 +126,12 @@
             </div>
           </div>
         </div>
-        <div
-          class="
-            w-full
-            h-1
-            mt-5
-            border-b-2 border-t-0 border-l-0 border-r-0 border-gray-600
-            absolute
-            left-0
-            block
-          "
-        ></div>
-        <Item></Item>
-        <div
-          class="
-            w-full
-            h-1
-            mt-5
-            border-b-2 border-t-0 border-l-0 border-r-0 border-gray-600
-            absolute
-            left-0
-            block
-          "
-        ></div>
-        <Item></Item>
-        <div
-          class="
-            w-full
-            h-1
-            mt-5
-            border-b-2 border-t-0 border-l-0 border-r-0 border-gray-600
-            absolute
-            left-0
-            block
-          "
-        ></div>
-        <Item></Item>
-        <div class="bg-gray-900 mt-10 relative rounded-2xl flex items-center justify-center p-4">
+        <Separator class="mr-8" />
+
+        <Item />
+        <Item />
+        <Item />
+        <div class="bg-gray-900 mt-14 relative rounded-2xl flex items-center justify-center p-4">
           Load More
         </div>
       </div>
@@ -178,6 +148,7 @@ import Item from '../components/shared/Item.vue';
 import PlanetPicVert from '../components/shared/PlanetPicVert.vue';
 import PlanetPicHor from '../components/shared/PlanetPicHor.vue';
 import BellIcon from '../components/shared/BellIcon.vue';
+import Separator from '../components/shared/Separator.vue';
 
 export default {
   name: 'Home',
@@ -190,6 +161,7 @@ export default {
     PlanetPicVert,
     PlanetPicHor,
     BellIcon,
+    Separator,
   },
 };
 </script>

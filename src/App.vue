@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class="md:flex">
-      <AppBar class="md:hidden"></AppBar>
-      <aside class="hidden md:h-screen md:block border-r-2 border-gray-600 md:sticky md:top-0 w-64"></aside>
+      <AppBar class="md:hidden" />
+      <Sidebar />
       <main class="px-8 flex flex-col h-auto text-white">
         <router-view />
       </main>
@@ -12,11 +12,12 @@
 
 <script>
 import AppBar from './components/shared/AppBar.vue';
-
+import Sidebar from '@/components/shared/layout/Sidebar';
 export default {
   name: 'App',
   components: {
     AppBar,
+    Sidebar,
   },
 };
 </script>

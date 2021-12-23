@@ -21,7 +21,7 @@
                 flex flex-shrink-0
                 justify-center
                 items-center
-                mr-10
+                mr-4
                 focus-within:border-blue-500
               "
             >
@@ -59,22 +59,11 @@
             <div class="text-green-600">5.0</div>
           </span>
         </div>
-        <div
-          class="
-            w-full
-            h-1
-            mt-5
-            border-b-2 border-t-0 border-l-0 border-r-0 border-gray-600
-            absolute
-            left-0
-            block
-          "
-        ></div>
       </div>
     </div>
     <div class="hidden md:block">
-      <div class="flex mt-10 items-center justify-left mr-4 mb-2">
-        <div class="w-6/12 flex flex-row">
+      <div class="flex mt-14 items-center justify-left mr-4 mb-2">
+        <div class="w-6/12 flex flex-row justify-center items-center">
           <input
             type="checkbox"
             id="A3-yes"
@@ -91,7 +80,6 @@
               flex flex-shrink-0
               justify-center
               items-center
-              mr-10
               focus-within:border-blue-500
             "
           >
@@ -110,8 +98,8 @@
               </g>
             </svg>
           </div>
-          <div class="ml-3">
-            <TriangleImage></TriangleImage>
+          <div class="ml-0">
+            <img class="w-48" src="../../assets/img/triangle-card.png" />
           </div>
           <div class="ml-5">
             <h3 class="text-lg font-semibold">Bento Abstract 3D Kit</h3>
@@ -133,17 +121,20 @@
         </div>
       </div>
     </div>
+    <Separator />
   </div>
 </template>
 
 <script>
 import TriangleImage from './TriangleImage.vue';
+import Separator from '@/components/shared/Separator.vue';
 
 export default {
   name: 'Item',
   props: {},
   components: {
     TriangleImage,
+    Separator,
   },
   methods: {
     onClick() {

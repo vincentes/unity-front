@@ -1,14 +1,14 @@
 <template>
   <div class="w-auto relative flex items-center justify-center">
-    <div class="bg-purple-300 h-32 px-12 w-11/12 rounded-3xl absolute -bottom-2"></div>
-    <div class="bg-purple-300 h-32 px-12 w-10/12 rounded-3xl absolute -bottom-4"></div>
+    <div class="bg-light h-32 px-12 w-11/12 rounded-3xl absolute -bottom-2"></div>
+    <div class="bg-light h-40 px-12 w-10/12 rounded-3xl absolute -bottom-4"></div>
     <div
       class="
         mt-6
         p-10
         flex flex-col
         justify-center
-        bg-purple-500
+        bg-secondary
         rounded-3xl
         items-center
         text-center

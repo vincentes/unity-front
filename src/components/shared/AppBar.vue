@@ -1,14 +1,7 @@
 <template>
   <div>
     <div class="px-8 h-20 flex justify-between items-center text-white">
-      <div>
-        <svg class="w-6" viewBox="0 0 32 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="32" height="2" rx="1" fill="white" />
-        </svg>
-        <svg class="w-6 mt-1" viewBox="0 0 32 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="32" height="2" rx="1" fill="white" />
-        </svg>
-      </div>
+      <MenuIcon />
       <div class="flex items-center space-x-12 mr-3">
         <div>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,9 +13,12 @@
             />
           </svg>
         </div>
-        <BellIcon></BellIcon>
+        <div class="relative">
+          <div class="bg-yellow-600 w-2 h-2 rounded-full absolute top-0 right-0"></div>
+          <BellIcon />
+        </div>
         <div>
-          <PersonImage></PersonImage>
+          <PersonImage />
         </div>
       </div>
     </div>
@@ -32,12 +28,14 @@
 <script>
 import PersonImage from './PersonImage.vue';
 import BellIcon from './BellIcon.vue';
+import MenuIcon from './MenuIcon.vue';
 
 export default {
   name: 'AppBar',
   components: {
     PersonImage,
     BellIcon,
+    MenuIcon,
   },
 };
 </script>

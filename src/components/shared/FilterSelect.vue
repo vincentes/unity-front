@@ -5,7 +5,7 @@
       class="
         w-full
         rounded-2xl
-        bg-gray-700
+        bg-primary-intermediate
         select-none
         focus:ring-opacity-500 focus:ring-gray-700 focus:outline-none
         btn btn-blue

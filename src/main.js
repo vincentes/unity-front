@@ -13,7 +13,7 @@ new Vue({
   router,
   store,
   mounted: function () {
-    document.body.classList.add('bg-gray-900');
+    document.body.classList.add('bg-white');
   },
   render: h => h(App),
 }).$mount('#app');
